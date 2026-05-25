@@ -3,6 +3,15 @@ import type { DashboardData, FilterOptions, InsightResponse } from '@/types/api'
 
 const http = axios.create({ baseURL: '/api' })
 
+http.interceptors.response.use(
+  (res) => res,
+  (err) => {
+    const detail = err?.response?.data?.detail
+    if (detail) err.message = detail
+    return Promise.reject(err)
+  },
+)
+
 export async function fetchFilters(): Promise<FilterOptions> {
   const { data } = await http.get<FilterOptions>('/filters')
   return data

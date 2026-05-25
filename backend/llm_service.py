@@ -33,7 +33,7 @@ class LLMService:
         )
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.0-flash-lite", contents=prompt
+                model="gemini-2.5-flash-lite", contents=prompt
             )
             text = response.text or ""
             if not text.strip():

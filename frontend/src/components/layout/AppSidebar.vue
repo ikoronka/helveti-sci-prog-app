@@ -26,6 +26,12 @@
         <span>{{ filtersStore.bhkMin }}</span>
         <span>{{ filtersStore.bhkMax }}</span>
       </div>
+      <p class="mt-2 text-xs text-slate-400 leading-snug">
+        <span class="font-medium text-slate-500">BHK</span> = Bedrooms, Hall, Kitchen —
+        the standard Indian apartment size unit. Slide to see how average rent,
+        size distribution, and the rent-per-sqft relationship change for each
+        apartment type.
+      </p>
     </div>
   </aside>
 </template>
