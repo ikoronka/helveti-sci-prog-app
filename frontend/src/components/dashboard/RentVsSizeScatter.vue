@@ -13,13 +13,14 @@ import {
   LinearScale,
   PointElement,
   LineElement,
+  LineController,
   Tooltip,
   Legend,
 } from 'chart.js'
 import type { ChartData } from 'chart.js'
 import type { Regression, ScatterPoint } from '@/types/api'
 
-ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend)
+ChartJS.register(LinearScale, PointElement, LineElement, LineController, Tooltip, Legend)
 
 const props = defineProps<{ scatter: ScatterPoint[]; regression: Regression }>()
 
