@@ -159,7 +159,7 @@ Kaggle credentials must be at `~/.kaggle/kaggle.json`. The backend does not mana
 ### Docker
 
 - **Backend Dockerfile:** `python:3.13-slim` base. Install deps from `requirements.txt`, copy source, start with `uvicorn main:app --host 0.0.0.0 --port 8000`.
-- **Frontend Dockerfile:** Multi-stage. Stage 1: `node:22-alpine`, run `npm ci && npm run build`. Stage 2: `nginx:alpine`, copy `dist/` and `nginx.conf`.
+- **Frontend Dockerfile:** Multi-stage. Stage 1: `node:22-alpine` with `corepack enable`, run `pnpm install --frozen-lockfile && pnpm run build`. Stage 2: `nginx:alpine`, copy `dist/` and `nginx.conf`.
 - **Never use `:latest` tags** in Dockerfiles. Pin base image versions.
 - **`house_rent.db` is a volume mount**, not baked into the image. This persists the SQLite database across container rebuilds without re-downloading from Kaggle.
 

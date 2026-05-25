@@ -28,8 +28,8 @@ The API will be at `http://localhost:8000`. On first run it downloads the Kaggle
 
 ```bash
 cd frontend
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 The dev server at `http://localhost:5173` proxies `/api/` to the backend automatically.

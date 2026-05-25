@@ -3,6 +3,7 @@ backend/house_rent.db
 backend/.ingestion_failed
 frontend/node_modules/
 frontend/dist/
+frontend/package-lock.json
 __pycache__/
 *.pyc
 .DS_Store
