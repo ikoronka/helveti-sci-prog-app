@@ -1,5 +1,7 @@
 # Helveti House Rent — Web App
 
+hosted at [helvetisciprog.ikoronka.com](https://helvetisciprog.ikoronka.com)
+
 This repository is the **interactive companion** to the [`helveti-sci-prog`](https://github.com/ikoronka/helveti-sci-prog) data science project. That project contains the original exploratory analysis, statistical tests, and regression modelling of the Indian house rent dataset (Kaggle). This web app packages the same analysis pipeline into a live dashboard so the findings can be explored interactively — filtering by city and BHK, inspecting key metrics, and generating AI-written research conclusions via Google Gemini.
 
 The two repos are kept separate by design: `helveti-sci-prog` is the submission/notebook repo; this repo is the production application that surfaces those results. The backend (`backend/analysis/`) re-implements the core analysis functions from the notebook as pure Python, and the SQLite data layer mirrors the ingestion logic from the data science project.
